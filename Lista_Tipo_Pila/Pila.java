@@ -9,13 +9,8 @@ public class Pila {
     private Nodo cima;
     private int tamano;
 
-    public Pila() {
-        this.cima = null;
-        this.tamano = 0;
-    }
-
     //Insertar un elemento en la cima
-    public void empujar(int dato) {
+    public void insertar(int dato) {
         Nodo nuevoNodo = new Nodo();
         nuevoNodo.setDato(dato);
         if (cima == null) {
@@ -28,7 +23,7 @@ public class Pila {
     }
 
     //Metodo para eliminar el ultimo elemento de la cima
-    public Integer eliminar() {
+    public Integer quitar() {
         if (cima == null) {
             System.out.println("La pila esta vacia");
             return null;
@@ -41,18 +36,18 @@ public class Pila {
     }
 
     //Metodo para comprobar si la pila se encuentra vacia devolviendo un false o un true
-    public boolean estaVacio() {
+    public boolean estaVacia() {
         return cima == null;
     }
 
     //Metodo para vaciar la pila
-    public void vaciarPila() {
+    public void vaciar() {
         cima = null;
         tamano = 0;
     }
     
     //Metodo para visualizar el ultimo elemento en la cima
-    public Integer verCima() {
+    public Integer obtenerCima() {
         if (cima == null) {
             System.out.println("La pila esta vacia");
             return null;
@@ -62,8 +57,11 @@ public class Pila {
     }
     
     //Metodo para retornar el numer de elementos de la pila
-    public int getTamano() {
+    public int getTamanio() {
         return tamano;
     }
 
 }
+
+
+
