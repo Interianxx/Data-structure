@@ -5,7 +5,7 @@ package Lista_Tipo_Pila;
  * @author Alema
  */
 public class Nodo {
-    //Atributos privados 
+    //Atributos privados, Int no puede ser nulo por lo cual utilice Integer
     private Integer dato;
     private Nodo nodo;
     
