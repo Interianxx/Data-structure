@@ -17,24 +17,25 @@ public class Main {
         //Se crea un arreglo de numeros para almacenar los numeros
         int[] numeros = {14, 27, 1, 15, 10, 90, 71, 37, 2, 46};
         for (int num : numeros) {
-            pila1.empujar(num);
+            pila1.insertar(num);
         }
         
         //Se imprime el tamaño de la pila
-        System.out.println("Tamano de la pila: " + pila1.getTamano());
+        System.out.println("Tamano de la pila: " + pila1.getTamanio());
         
         //Se eliminan 4 elementos de la pila 
         for (int i = 0; i < 4; i++) {
-            pila1.eliminar();
+            pila1.quitar();
         }
         
         //Se imprime el elemento de la cima en este caso el 90
-        System.out.println("Elemento de la cima de la pila: " + pila1.verCima());
+        System.out.println("Elemento de la cima de la pila: " + pila1.obtenerCima());
         
         //Se vacia la pila
-        pila1.vaciarPila();
+        pila1.vaciar();
         
         //Se confirmara con el metodo estaVacio si en efecto la pila esta vacia :D
-        System.out.println("La  pila esta vacia? " + (pila1.estaVacio() ? "En efecto esta vacia" : "En efecto no esta vacia"));
+        System.out.println("La  pila esta vacia? " + (pila1.estaVacia()? "En efecto esta vacia" : "En efecto no esta vacia"));
     }
 }
+
