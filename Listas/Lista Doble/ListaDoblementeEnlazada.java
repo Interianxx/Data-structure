@@ -36,11 +36,19 @@ public class ListaDoblementeEnlazada {
             return -1;
         }
         
-        Nodo actualNodo = primerNodo;
-        
-        for (int i=0; i < indice; i++){
-            actualNodo = actualNodo.getSiguiente();
+       Nodo actualNodo;
+        if (indice < longitud / 2) {
+            actualNodo = primerNodo;
+            for (int i = 0; i < indice; i++) {
+                actualNodo = actualNodo.getSiguiente();
+            }
+        } else {
+            actualNodo = ultimoNodo;
+            for (int i = longitud - 1; i > indice; i--) {
+                actualNodo = actualNodo.getAnterior();
+            }
         }
+
         return actualNodo.getDato();
     }
 
@@ -85,3 +93,4 @@ public class ListaDoblementeEnlazada {
     }
     
 }
+
