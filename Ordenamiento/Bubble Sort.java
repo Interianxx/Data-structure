@@ -19,10 +19,10 @@ public class BubbleSort {
                     arr[j + 1] = temp;
                     swapped = true;
                 }
-                // Imprime el estado del arreglo en la iteración j
+             
                 System.out.println(Arrays.toString(arr));
             }
-            // Si no se hizo ningún intercambio, el arreglo ya está ordenado
+        
             if (!swapped) {
                 break;
             }
