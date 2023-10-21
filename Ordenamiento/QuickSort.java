@@ -28,7 +28,7 @@ public class QuickSort {
                 i++;
                 j--;
             }
-            System.out.println("--" + Arrays.toString(arr));
+            System.out.println("-" + Arrays.toString(arr));
         } while (i <= j);
 
         if (primero < j) {
@@ -43,4 +43,5 @@ public class QuickSort {
 
     }
 }
+
 
