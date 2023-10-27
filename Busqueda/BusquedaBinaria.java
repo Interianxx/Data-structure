@@ -56,7 +56,7 @@ public class BusquedaBinaria {
             int nuevoNumero;
 
             do {
-                nuevoNumero = numerosaleatorios.nextInt(100);
+                nuevoNumero = 1 + numerosaleatorios.nextInt(999);
             } while (yaExisteEnArreglo(arreglo, nuevoNumero, i));
 
             arreglo[i] = nuevoNumero;
@@ -64,7 +64,7 @@ public class BusquedaBinaria {
     }
 
     private static boolean yaExisteEnArreglo(int[] arreglo, int valor, int hastaIndex) {
-        for (int i = 0; i < hastaIndex; i++) {
+        for (int i = 1; i < hastaIndex; i++) {
             if (arreglo[i] == valor) {
                 return true;
             }
@@ -90,7 +90,7 @@ public class BusquedaBinaria {
         while (inicio <= fin) {
             int medio = (inicio + fin) / 2;
             if (arr[medio] == numero) {
-                return medio;
+                return medio + 1;
             } else if (arr[medio] < numero) {
                 inicio = medio + 1;
             } else {
@@ -101,4 +101,3 @@ public class BusquedaBinaria {
     }
 
 }
-
