@@ -1,6 +1,10 @@
 
 import java.util.Random;
 
+/**
+ *
+ * @author Alema
+ */
 public class BusquedaBinaria {
 
     public static int[] radixSort(int[] arr) {
