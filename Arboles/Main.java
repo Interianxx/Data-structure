@@ -60,5 +60,12 @@ public class Main {
         arbol.imprimirArbol(Recorrido.INFIJO);
         System.out.println("\nRecorrido en Posfijo");
         arbol.imprimirArbol(Recorrido.POSFIJO);
+
+        if (arbol.estaVacio()) {
+
+            System.out.println("\nEl arbol esta vacio");
+        } else {
+            System.out.println("\nEl arbol no esta vacio");
+        }
     }
 }
