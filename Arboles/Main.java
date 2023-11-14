@@ -67,5 +67,12 @@ public class Main {
         } else {
             System.out.println("\nEl arbol no esta vacio");
         }
+
+        int alturaArbol = arbol.obtenerAltura();
+        System.out.println("La altura del arbol es: " + alturaArbol);
+        
+        
     }
+
 }
+
