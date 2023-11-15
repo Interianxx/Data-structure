@@ -1,3 +1,8 @@
+
+/**
+ *
+ * @author Alema
+ */
 public enum Recorrido {
-  PREFIJO, INFIJO, POSFIJO;
+    PREFIJO, INFIJO, POSFIJO;
 }

@@ -54,5 +54,30 @@ public class Arbol<T> {
     public boolean estaVacio() {
         return raiz == null;
     }
-}
 
+    private int calcularAltura(NodoArbol<T> nodo) {
+        if (nodo == null) {
+            return 0;
+        } else {
+            NodoArbol<T> hijo = nodo.obtenerPrimerHijo();
+            int alturaMaxima = 0;
+            while (hijo != null) {
+                int alturaHijo = calcularAltura(hijo);
+                alturaMaxima = Math.max(alturaMaxima, alturaHijo);
+                hijo = hijo.obtenerSiguienteHermano();
+            }
+            return alturaMaxima + 1;
+        }
+
+    }
+
+    public int alturaArbol() {
+
+        return calcularAltura(raiz);
+    }
+
+    public void imprimirSubArbol() {
+        raiz.imprimirSubArbol();
+    }
+
+}
