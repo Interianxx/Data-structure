@@ -1,3 +1,8 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+
 /**
  *
  * @author Alema
@@ -53,12 +58,10 @@ public class Main {
 
         arbol.agregarNodoArbol(nodoM, nodoP);
         arbol.agregarNodoArbol(nodoM, nodoQ);
-
-        System.out.println("Recorrido en Prefijo:");
+        
+        System.out.println("Arbol no binario");
         arbol.imprimirArbol(Recorrido.PREFIJO);
-        System.out.println("\nRecorrido en Infijo:");
         arbol.imprimirArbol(Recorrido.INFIJO);
-        System.out.println("\nRecorrido en Posfijo");
         arbol.imprimirArbol(Recorrido.POSFIJO);
 
         if (arbol.estaVacio()) {
@@ -68,11 +71,67 @@ public class Main {
             System.out.println("\nEl arbol no esta vacio");
         }
 
-        int alturaArbol = arbol.obtenerAltura();
+        int alturaArbol = arbol.alturaArbol();
         System.out.println("La altura del arbol es: " + alturaArbol);
         
+        System.out.println("Imprimir el sub-arbol");
+        nodoB.imprimirSubArbol();
         
+        System.out.println("\nArbol binario");
+        
+        Arbol<String> ArbolBinario = new Arbol("A", true);
+        
+        NodoArbol <String> NodoB2 = new NodoArbol<>("B");
+        NodoArbol <String> NodoC2 = new NodoArbol<>("C");
+        NodoArbol <String> NodoD2 = new NodoArbol<>("D");
+        NodoArbol <String> NodoE2 = new NodoArbol<>("E");
+        NodoArbol <String> NodoF2 = new NodoArbol<>("F");
+        NodoArbol <String> NodoG2 = new NodoArbol<>("G");
+        NodoArbol <String> NodoH2 = new NodoArbol<>("H");
+        NodoArbol <String> NodoI2 = new NodoArbol<>("I");
+        NodoArbol <String> NodoJ2 = new NodoArbol<>("J");
+        NodoArbol <String> NodoK2 = new NodoArbol<>("K");
+        NodoArbol <String> NodoL2 = new NodoArbol<>("L");
+        NodoArbol <String> NodoM2 = new NodoArbol<>("M");
+        NodoArbol <String> NodoN2 = new NodoArbol<>("N");
+        NodoArbol <String> NodoO2 = new NodoArbol<>("O");
+        NodoArbol <String> NodoP2 = new NodoArbol<>("P");
+        NodoArbol <String> NodoQ2 = new NodoArbol<>("Q");
+        
+        ArbolBinario.agregarNodoArbol(ArbolBinario.obtenerRaiz(), NodoB2);
+        
+        ArbolBinario.agregarNodoArbol(NodoB2, NodoE2);
+        ArbolBinario.agregarNodoArbol(NodoB2, NodoC2);
+        ArbolBinario.agregarNodoArbol(NodoE2, NodoF2);
+        ArbolBinario.agregarNodoArbol(NodoF2, NodoJ2);
+        ArbolBinario.agregarNodoArbol(NodoJ2, NodoK2);
+        ArbolBinario.agregarNodoArbol(NodoK2, NodoL2);
+        
+        ArbolBinario.agregarNodoArbol(NodoC2, NodoD2);
+        ArbolBinario.agregarNodoArbol(NodoD2, NodoG2);
+        ArbolBinario.agregarNodoArbol(NodoG2, NodoM2);
+        ArbolBinario.agregarNodoArbol(NodoG2, NodoH2);
+        ArbolBinario.agregarNodoArbol(NodoM2, NodoP2);
+        ArbolBinario.agregarNodoArbol(NodoP2, NodoQ2);
+        
+        ArbolBinario.agregarNodoArbol(NodoH2, NodoI2);
+        ArbolBinario.agregarNodoArbol(NodoI2, NodoN2);
+        ArbolBinario.agregarNodoArbol(NodoN2, NodoO2);
+        
+        ArbolBinario.imprimirArbol(Recorrido.PREFIJO);
+        ArbolBinario.imprimirArbol(Recorrido.INFIJO);
+        ArbolBinario.imprimirArbol(Recorrido.POSFIJO);
+        
+        if (ArbolBinario.estaVacio()) {
+
+            System.out.println("\nEl arbol esta vacio");
+        } else {
+            System.out.println("\nEl arbol no esta vacio");
+        }
+
+        System.out.println("La altura del arbol es " + ArbolBinario.alturaArbol());
+        System.out.println("Imprimir el sub-arbol ");
+        NodoB2.imprimirSubArbol();
     }
 
 }
-
