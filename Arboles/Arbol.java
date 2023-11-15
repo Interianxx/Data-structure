@@ -1,12 +1,25 @@
 
 /**
- *
+ * Esta clase representa un arbol general o binario dependiendo del tipo.
+ * 
+ * @param <T> Es un tipo de datos almacenados en el arbol.
  * @author Alema
  */
 public class Arbol<T> {
 
+    /*
+     * NodoArbol raiz del arbol.
+     * esBinario Indica si el arbol es binario o no.
+     */
+
     private NodoArbol<T> raiz;
     private boolean esBinario = false;
+
+    /*
+     * @param dato Es el valor para la raiz del arbol.
+     * 
+     * @param esBinario Es verdadero si el arbol es binario, Falso si es general.
+     */
 
     public Arbol(T dato, boolean esBinario) {
         raiz = new NodoArbol<T>(dato);
@@ -30,6 +43,12 @@ public class Arbol<T> {
         nodoRaiz.agregarHijo(nodoAgregado);
     }
 
+    /*
+     * Imprime el arbol en el recorrido especificado.
+     * 
+     * @param recorrido Es el tiempo de recorrido a utiliza ya se Prefijo, Infijo o
+     * Posfijo.
+     */
     public void imprimirArbol(Recorrido recorrido) {
         switch (recorrido.ordinal()) {
             case 0:
@@ -56,6 +75,9 @@ public class Arbol<T> {
         return raiz == null;
     }
 
+    /*
+     * Calcula la altura del arbol
+     */
     private int calcularAltura(NodoArbol<T> nodo) {
         if (nodo == null) {
             return 0;
@@ -72,10 +94,16 @@ public class Arbol<T> {
 
     }
 
+    /*
+     * Obtiene la altura del arbol
+     */
     public int alturaArbol() {
 
         return calcularAltura(raiz);
     }
+    /*
+     * Imprime el sub-arbol desde la raiz
+     */
 
     public void imprimirSubArbol() {
         raiz.imprimirSubArbol();
