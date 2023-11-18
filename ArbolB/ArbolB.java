@@ -1,4 +1,8 @@
-
+/**
+ * Clase que representa un árbol B.
+ * @param orden El orden del árbol, que determina la cantidad máxima de claves en un nodo.
+ * @param raiz La raíz del árbol B.
+ */
 public class ArbolB {
     int orden;
     NodoB raiz;
